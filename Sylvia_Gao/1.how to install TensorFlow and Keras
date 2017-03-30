@@ -1,0 +1,92 @@
+3/30/2017	by Sylvia Gao from Data Lab
+
+Tesorflow and keras are most common used package based on python. It will be good to have some a.basic python knowledge and b.the conceptual deep-learning model before build any deep learning model.
+***********************
+For mac user:
+#(Need hands help for this part)
+***********************
+
+***********************
+For windows user:
+#It is easier to install tensorflow throught "native" pip, not Anaconda 
+(the latest version - Anaconda 3.6 64bit - doesn't support tensorflow for windows user yet)
+
+1.install python3.5.2
+
+go www.python.org/downloads/release/python-352/
+
+select "Windows x86-64 executable installer" and download,install (suggest not to change default direction if you're first time user)
+
+2.install tensorflow
+
+#open command line window (type cmd in the windows search bar)
+
+##To install the CPU-only version of Tensorflow (First time user suggested)
+
+c:\>pip install --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-0.12.1-cp35-cp35m-win_amd.whl
+
+#To install the GPU version of Tensorflow (if your system has a NVIDIA® GPU, this runs program faster) 
+
+c:\>pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-0.12.1-cp35-cp35m-win_amd64.whl
+
+3.test your installation
+
+c:\>python
+
+>>>import tensorflow as tf
+>>>hello = tf.constant('Hello, TensorFlow!')
+>>>sess = tf.Session()
+>>>print(sess.run(hello))
+Hello, TensorFlow!
+>>>a = tf.constant(10)
+>>>b = tf.constant(32)
+>>>print(sess.run(a+b))
+42
+
+4.(optional/suggested) install jupyter notebook (user friendly notebook to write code)
+
+#open command line window (type cmd in the windows search bar)
+
+c:\>pip3 install --upgrade pip
+
+c:\>pip3 install jupyter
+
+#open jupyter notebook
+
+c:\>jupyter notebook
+
+#now you can write tensorflow code on jupyter notebook
+
+5.install keras on windows
+
+#before install keras, need to install Git from "https://git-scm.com/downloads"
+ 
+#open command line window (type cmd in the windows search bar)
+
+c:\>git clone git://github.com/fchollet/keras.git
+
+c:\>cd keras
+
+c:\keras>python setup.py develop
+
+6.other package you may need to install
+
+c:\>python -m pip install --upgrade pip
+
+c:\>pip install --user numpy matplotlib ipython jupyter pandas sympy nose
+
+#install numpy+mkl from local file
+
+#download "numpy-1.11.3+mkl-cp35-cp35m-win_amd64.whl" from "http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" to your local direction
+
+c:\>pip install numpy-1.11.3+mkl-cp35-cp35m-win_amd64.whl
+
+#install scipy from local file
+
+#download "scipy‑0.19.0‑cp35‑cp35m‑win_amd64.whl" from "http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy" to your local direction
+
+c:\>pip install scipy‑0.19.0‑cp35‑cp35m‑win_amd64.whl
+
+
+
+
